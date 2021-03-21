@@ -1,4 +1,4 @@
 .idea
 *.iml
-/node_modules
+/react-nodebird/front/node_modules
 /dist
