@@ -2,3 +2,4 @@
 *.iml
 /react-nodebird/front/node_modules
 /dist
+.next
