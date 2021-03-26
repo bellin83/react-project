@@ -1,51 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Head from 'next/head';
 import AppLayout from "../components/AppLayout";
 import { Form, Input, Checkbox, Button } from 'antd';
 
 const Signup = () => {
-  // normals
-  const [id, setId] = useState('');
-  const [nick, setNick] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
-  const [term, setTerm] = useState(false);
-  // errors
   const [passwordError, setPasswordError] = useState(false);
+  const [term, setTerm] = useState(false);
   const [termError, setTermError] = useState(false);
 
-  const onSubmit = (e) => {
+  // custon hook!
+  const useInput = (initValue = null) => {
+    const [value, setter] = useState(initValue);
+    const handler = useCallback((e) => {
+      setter(e.target.value);
+    }, []);
+    return [value, handler];
+  };
+
+  const [id, onChangeId] = useInput('');
+  const [nick, onChangeNick] = useInput('');
+
+  const onSubmit = useCallback((e) => {
     e.preventDefault();
 
     if (password !== passwordCheck) return setPasswordError(true);
     if (!term) return setTermError(true);
-  };
-  const onChangeId = (e) => {
-    setId(e.target.value);
-  };
-  const onChangeNick = (e) => {
-    setNick(e.target.value);
-  };
+
+console.log(id, nick, password, passwordCheck, term);
+  }, [password, passwordCheck, term]);
   const onChangePassword = (e) => {
     setPasswordError(e.target.value !== passwordCheck);
     setPassword(e.target.value);
   };
-  const onChangePasswordCheck = (e) => {
+  const onChangePasswordCheck = useCallback((e) => {
     setPasswordError(e.target.value !== password);
     setPasswordCheck(e.target.value);
-  };
-  const onChangeTerm = (e) => {
+  }, [password]);
+  const onChangeTerm = useCallback((e) => {
     setTerm(e.target.checked);
-  };
-
-  // custon hook!
-  // const useInput = (initValue = null) => {
-  //   const [value, setter] = useState(initValue);
-  //   const handler = (e) => {
-  //     setter(e.target.value);
-  //   };
-  //   return [value, handler];
-  // };
+  }, []);
 
   return (
     <>
