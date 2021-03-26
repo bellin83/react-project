@@ -11,7 +11,7 @@
   "author": "Ubar",
   "license": "MIT",
   "dependencies": {
-    "antd": "^4.14.1",
+    "antd": "^3.26.19",
     "next": "^10.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
