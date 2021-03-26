@@ -28,7 +28,7 @@ const Signup = () => {
     if (password !== passwordCheck) return setPasswordError(true);
     if (!term) return setTermError(true);
 
-console.log(id, nick, password, passwordCheck, term);
+// console.log(id, nick, password, passwordCheck, term);
   }, [password, passwordCheck, term]);
   const onChangePassword = (e) => {
     setPasswordError(e.target.value !== passwordCheck);
