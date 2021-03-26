@@ -10,7 +10,7 @@ const Signup = () => {
   const [term, setTerm] = useState(false);
   const [termError, setTermError] = useState(false);
 
-  // custon hook!
+  // custom hook!
   const useInput = (initValue = null) => {
     const [value, setter] = useState(initValue);
     const handler = useCallback((e) => {
