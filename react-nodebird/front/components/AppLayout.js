@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Menu, Input } from "antd";
+import { Menu, Input, Button } from "antd";
 
 const AppLayout = ({ children }) => {
   return (
@@ -12,6 +12,7 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
         </Menu.Item>
       </Menu>
+      <Link href='/signup'><a><Button>회원가입</Button></a></Link>
       {children}
     </div>
   );
