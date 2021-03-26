@@ -1,5 +1,6 @@
 .idea
 *.iml
-/react-nodebird/front/node_modules
-/dist
 .next
+node_modules
+dist
+out
