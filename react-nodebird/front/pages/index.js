@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import AppLayout from "../components/AppLayout";
 import 'antd/dist/antd.css';
-import 'antd/dist/antd.js';
+// import 'antd/dist/antd.js';
 
 const Home = () => {
   return (
