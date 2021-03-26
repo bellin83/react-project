@@ -1,6 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import Head from 'next/head';
-import AppLayout from "../components/AppLayout";
 import { Form, Input, Checkbox, Button } from 'antd';
 
 const Signup = () => {
