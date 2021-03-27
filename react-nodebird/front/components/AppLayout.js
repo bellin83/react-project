@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { Menu, Input, Button, Row, Col, Card, Avatar } from "antd";
+import { Menu, Input, Button, Row, Col, Card, Avatar, Form } from "antd";
 
 const dummy = {
   nickname: 'Ubar',
@@ -20,7 +20,6 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
         </Menu.Item>
       </Menu>
-      <Link href='/signup'><a><Button>회원가입</Button></a></Link>
       <Row>
         <Col xs={24} md={6}>
           <Card
@@ -31,10 +30,18 @@ const AppLayout = ({ children }) => {
             ]}
           >
             <Card.Meta
-              avatar={<Avatar>{dummy.nickname[0]}</Avatar>}
+              avatar={<Avatar>{dummy.nickname[0]}</Avatar>}g
               title={dummy.nickname}
             />
           </Card>
+          <Form>
+            {/*<div>*/}
+            {/*  <label htmlFor="user-id">아이디</label>*/}
+            {/*  <br />*/}
+            {/*  <Input name="user-id" value={userId} onChange={onChangeId} required />*/}
+            {/*</div>*/}
+          </Form>
+          <Link href='/signup'><a><Button>회원가입</Button></a></Link>
         </Col>
         <Col xs={24} md={12}>
 
