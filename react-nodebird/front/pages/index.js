@@ -20,7 +20,7 @@ const Home = () => {
       {dummy.isLoggedIn &&
         <Form
           encType="multipart/form-data"
-          style={{ marginBottom: 20 }}
+          style={{ margin: '10px 0 20px' }}
         >
           <Input.TextArea maxLength={140} placeholder="어떤 신기한 일이 있었나요?"></Input.TextArea>
           <div>
