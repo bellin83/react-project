@@ -2,6 +2,7 @@ import React from 'react';
 import Head from "next/head";
 import PropTypes from 'prop-types';
 import AppLayout from "../components/AppLayout";
+import reducer from "../reducers";
 
 const NodeBird = ({ Component }) => {
   return (
