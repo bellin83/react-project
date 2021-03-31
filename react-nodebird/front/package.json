@@ -5,26 +5,27 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "author": "Ubar",
   "license": "MIT",
   "dependencies": {
-    "antd": "^3.26.19",
-    "next": "^10.0.9",
+    "antd": "^3.17.0",
+    "next": "^8.1.0",
+    "next-redux-wrapper": "^3.0.0-alpha.2",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-redux": "^7.2.3",
-    "redux": "^4.0.5"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0-alpha.4",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "nodemon": "^2.0.7",
-    "webpack": "^5.27.1"
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "nodemon": "^1.19.0",
+    "webpack": "^4.30.0"
   }
 }
