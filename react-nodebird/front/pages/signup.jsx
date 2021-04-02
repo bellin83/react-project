@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { Form, Input, Checkbox, Button } from 'antd';
+import {signUpAction} from "../reducers/user";
+import {useDispatch} from "react-redux";
 
 // custom hook!
 export const useInput = (initValue = null) => {
@@ -18,14 +20,18 @@ const Signup = () => {
   const [termError, setTermError] = useState(false);
   const [id, onChangeId] = useInput('');
   const [nick, onChangeNick] = useInput('');
+  const dispatch = useDispatch();
 
   const onSubmit = useCallback((e) => {
     e.preventDefault();
 
     if (password !== passwordCheck) return setPasswordError(true);
     if (!term) return setTermError(true);
-
-// console.log(id, nick, password, passwordCheck, term);
+    dispatch(signUpAction({
+      id,
+      password,
+      nick
+    }));
   }, [password, passwordCheck, term]);
   const onChangePassword = (e) => {
     setPasswordError(e.target.value !== passwordCheck);
