@@ -23,12 +23,10 @@ export const LOG_OUT_REQUEST = 'LOG_OUT_REQUEST';
 export const LOG_OUT_SUCCESS = 'LOG_OUT_SUCCESS';
 export const LOG_OUT_FAILURE = 'LOG_OUT_FAILURE';
 
-export const signUpAction = data => {
-  return {
-    type: SIGN_UP_REQUEST,
-    data: data,
-  }
-};
+export const signUpAction = data => ({
+  type: SIGN_UP_REQUEST,
+  data,
+});
 
 export const loginAction = {
   type: LOG_IN_REQUEST,
@@ -45,7 +43,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         loginData: action.data,
         isLoading: true,
-      }
+      };
     }
     case LOG_IN_SUCCESS: {
       return {
@@ -53,25 +51,25 @@ const reducer = (state = initialState, action) => {
         isLoggedIn: true,
         user: dummyUser,
         isLoading: false,
-      }
+      };
     }
     case LOG_OUT_REQUEST: {
-        return {
-          ...state,
-          isLoggedIn: false,
-          user: null,
-        }
+      return {
+        ...state,
+        isLoggedIn: false,
+        user: null,
+      };
     }
     case SIGN_UP_REQUEST: {
       return {
         ...state,
         signUpData: action.data,
-      }
+      };
     }
     default: {
       return {
         ...state,
-      }
+      };
     }
   }
 };

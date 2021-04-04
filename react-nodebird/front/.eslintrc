@@ -18,5 +18,9 @@
   "plugins": [
     "import",
     "react-hooks"
-  ]
+  ],
+  "rules": {
+    "no-underscore-dangle": "off",
+    "react/forbid-prop-types": "off"
+  }
 }
