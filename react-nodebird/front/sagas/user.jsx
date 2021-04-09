@@ -37,7 +37,9 @@ function signUpAPI() {
 
 function* signUp() {
   try {
-    yield call(signUpAPI);
+    // yield call(signUpAPI);
+    yield delay(1000);
+    throw new Error('에러에러');
     yield put({ // put은 dispatch와 동일
       type: SIGN_UP_SUCCESS,
     });
