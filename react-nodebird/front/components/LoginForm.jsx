@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { Button, Form, Input } from 'antd';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import { useInput } from '../pages/signup';
+import { useInput } from '../pages/signup'; // TODO: util 폴더로 옮기기
 import { LOG_IN_REQUEST } from '../reducers/user';
 
 const LoginForm = () => {
@@ -31,7 +31,7 @@ const LoginForm = () => {
       <div>
         <label htmlFor="user-password">비밀번호</label>
         <br />
-        <Input name="user-password" type="password" value={password} onChange={onChangePassword} required />
+        <Input name="user-password" value={password} onChange={onChangePassword} type="password" required />
       </div>
       <div style={{ marginTop: '10px' }}>
         <Button type="primary" htmlType="submit" loading={isLoggingIn}>로그인</Button>
