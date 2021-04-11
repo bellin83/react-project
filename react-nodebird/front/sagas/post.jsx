@@ -10,9 +10,7 @@ import {
   ADD_POST_SUCCESS,
 } from '../reducers/post';
 
-function addPostAPI() {
-
-}
+function addPostAPI() {}
 
 function* addPost() {
   try {
