@@ -1,7 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { Menu, Input, Button } from 'antd';
 import PropTypes from 'prop-types';
+import { Col, Input, Menu, Row } from 'antd';
+
+import LoginForm from './LoginForm';
+import UserProfile from './UserProfile';
+
+const dummy = {
+  nickname: '제로초',
+  Post: [],
+  Followings: [],
+  Followers: [],
+  isLoggedIn: false,
+};
 
 const AppLayout = ({ children }) => {
   return (
@@ -13,13 +24,23 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
         </Menu.Item>
       </Menu>
-      <Link href="/signup">
-        <a><Button>회원가입</Button></a>
-      </Link>
-      {children}
+      <Row gutter={8}>
+        <Col xs={24} md={6}>
+          {dummy.isLoggedIn
+            ? <UserProfile />
+            : <LoginForm />}
+        </Col>
+        <Col xs={24} md={12}>
+          {children}
+        </Col>
+        <Col xs={24} md={6}>
+          <a href="https://www.zerocho.com" target="_blank" rel="noreferrer noopener">Made by ZeroCho</a>
+        </Col>
+      </Row>
     </div>
   );
 };
+
 AppLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
