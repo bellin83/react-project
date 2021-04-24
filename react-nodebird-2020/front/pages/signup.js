@@ -1,5 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import {
+  Button, Checkbox, Form, Input,
+} from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import Router from 'next/router';
 import Head from 'next/head';
