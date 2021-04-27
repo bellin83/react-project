@@ -12,13 +12,8 @@
     "node": true,
     "es6": true
   },
-  "extends": [
-    "airbnb"
-  ],
-  "plugins": [
-    "import",
-    "react-hooks"
-  ],
+  "extends": ["airbnb"],
+  "plugins": ["import", "react-hooks"],
   "rules": {
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-is-valid": "off",
@@ -29,7 +24,6 @@
     "react/jsx-one-expression-per-line": "off",
     "object-curly-newline": "off",
     "linebreak-style": "off",
-    "no-param-reassign": "off",
-    "max-len": "off"
+    "no-param-reassign": "off"
   }
 }
