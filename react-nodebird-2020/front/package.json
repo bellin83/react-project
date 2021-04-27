@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "author": "zerocho",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "antd": "^4.3.0",
