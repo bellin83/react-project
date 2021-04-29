@@ -5,7 +5,7 @@ dotenv.config();
 module.exports = {
   development: {
     username: "root",
-    password: process.env.DB_PASSWORD,
+    password: "whddls83",
     database: "react-nodebird",
     host: "127.0.0.1",
     port: "13306",
